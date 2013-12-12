@@ -1,5 +1,6 @@
 FacebookOnRails::Application.routes.draw do
-  devise_for :users
+
+  devise_for :users, controllers: {ominauth_callbacks: 'users/ominauth_callbacks'}
   resources :posts
 
   get "pages/home"
